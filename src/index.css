@@ -1,5 +1,5 @@
-/* body{
-    background-image: url("https://images.pexels.com/photos/4226869/pexels-photo-4226869.jpeg?auto=compress&cs=tinysrgb&w=600");
+body{
+    background: url("../src/assets/bgimg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-} */
+}

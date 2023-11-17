@@ -72,17 +72,17 @@ const RestaurantList = () => {
         {list &&
           list.map((ele) => (
             <div
-              className="border border-secondary rounded p-3"
+              className=" rounded p-3"
               key={ele.id}
-              style={{ width: "18em" }}>
+              style={{ width: "18em", border: "3px solid black" }}>
               <h5>{ele.name}</h5>
               <div className="d-flex align-items-center gap-1 mb-2">
                 <IoCallOutline />
-                <span>{ele.contact}</span>
+                <span className="fw-semibold">{ele.contact}</span>
               </div>
               <div className="d-flex align-items-center gap-1 mb-2 ">
                 <CiLocationOn />
-                <span>{ele.address}</span>
+                <span className="fw-semibold">{ele.address}</span>
               </div>
               <div>
                 <button

@@ -9,10 +9,10 @@ const Header = () => {
     <header className=" bg-dark text-white p-3">
       <nav className="d-flex gap-3">
         <NavLink to={"/"} className={linkClasses}>
-          HOME
+          DineDiscover
         </NavLink>
         <NavLink to={"/add"} className={linkClasses}>
-          ADD
+          Add
         </NavLink>
       </nav>
     </header>

@@ -13,7 +13,7 @@ const RestaurantList = () => {
   const [list, setList] = useState();
   useEffect(() => {
     axios
-      .get("http://localhost:8090/crud/getData")
+      .get("https://restaurantlisting.onrender.com/crud/getData")
       .then((result) => {
         setList(result.data.data.reverse());
       })
@@ -28,7 +28,7 @@ const RestaurantList = () => {
 
   const modalDeleteHandler = (id) => {
     axios
-      .delete(`http://localhost:8090/crud/delete/${id}`)
+      .delete(`https://restaurantlisting.onrender.com/crud/delete/${id}`)
       .then((result) => {
         setToggle(!toggle);
       })
@@ -47,9 +47,17 @@ const RestaurantList = () => {
 
   const editModelHandler = (id, data) => {
     axios
-      .put(`http://localhost:8090/crud/update/${id}`, data)
+      .put(`https://restaurantlisting.onrender.com/crud/update/${id}`, data)
       .then((result) => {
         console.log("Data Updated Successfully");
+        axios
+          .get("https://restaurantlisting.onrender.com/crud/getData")
+          .then((result) => {
+            setList(result.data.data.reverse());
+          })
+          .catch((error) => {
+            console.log(error);
+          });
       })
       .catch((error) => {
         console.log(error);

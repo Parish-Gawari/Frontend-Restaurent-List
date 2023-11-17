@@ -35,7 +35,7 @@ const AddRestaurent = () => {
       return;
     } else {
       axios
-        .post("http://localhost:8090/crud/postData", newData)
+        .post("https://restaurantlisting.onrender.com/crud/postData", newData)
         .then((res) => {
           notify();
           return;
@@ -61,7 +61,7 @@ const AddRestaurent = () => {
             className="border rounded p-2"
             value={formData.name}
             onChange={(e) => {
-              setFormData({ ...formData, name: e.target.value.trim() });
+              setFormData({ ...formData, name: e.target.value });
             }}
             required
           />
@@ -75,7 +75,7 @@ const AddRestaurent = () => {
             className="border rounded p-2"
             value={formData.address}
             onChange={(e) => {
-              setFormData({ ...formData, address: e.target.value.trim() });
+              setFormData({ ...formData, address: e.target.value });
             }}
             required
           />
